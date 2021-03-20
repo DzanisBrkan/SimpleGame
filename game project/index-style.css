@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('/assets/background.jpg') no-repeat center;
+    /* testiranje loadera */
+    /* background: url("https://source.unsplash.com/random/4000x4000") no-repeat center; */
+    background-size: cover;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.menu-wrapper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    padding: 80px 40px 40px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 15px 25px rgba(236, 145, 61, 0.5);
+}
+.form::before {
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.08);
+    /* ovo je da se nakosi ova kao sjena */
+    /* transform: skewX(-26deg);
+    transform-origin:  bottom left; */
+    border-radius: 10px 0px 0px 10px;
+    /* bez ovoga ne mogu selektovati ispod ovoga form::befora (malo svjetlije linije u formi) */
+    pointer-events: none;
+}
+.form img {
+    position: absolute;
+    top: -40px;
+    /* centriranje slike na pola diva */
+    left: calc(50% - 50px);
+    width: 100px;
+    /* background: rgba(255,255,255, 0.05);
+    border-radius: 50%; */
+}
+.form h1 {
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    color: rgb(36, 225, 250);
+    margin-top: -10%;
+}
+
+.form h2 {
+    text-align: center;
+    justify-content: center;
+    letter-spacing: 1px;
+    margin-bottom: 5%;
+    color: white;
+}
+.form a, .form a:visited {
+    text-decoration: none;
+}
+.input-group  {
+    height: 10%;
+    width: 100%;
+    position: relative;
+}
+.input-group:hover  {
+    background-color:  rgba(36, 225, 250, 0.5);
+    border-radius: 60px;
+}
